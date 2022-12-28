@@ -458,7 +458,8 @@ table .form-group {
     .google,
     .facebook,
     .github,
-    .gitlab {
+    .gitlab,
+    .microsoft {
         border: 0px;
         text-shadow: 0 1px rgba(0,0,0,0.4);
     }
@@ -473,6 +474,9 @@ table .form-group {
     }
     .gitlab {
         background-color: #3f3177;
+    }
+    .microsoft {
+        background-color: #005cbf;
     }
 }
 
