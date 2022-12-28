@@ -11,6 +11,7 @@ RUN \
   apt-get install -y --no-install-recommends \
     default-mysql-client \
     vim \
+    clang \
     libfuzzy-dev && \
   rm -rf /var/lib/apt/lists/*
 

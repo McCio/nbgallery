@@ -253,7 +253,7 @@ Devise.setup do |config|
                                             site: ENV['GITLAB_URL']
                                           }
   config.omniauth :github, ENV['GITHUB_ID'], ENV['GITHUB_SECRET'], scope: 'user:email'
-  config.omniauth :facebook, ENV['FACEBOOK_ID'], ENV['FACEBOOK_SECRET']
+  # config.omniauth :facebook, ENV['FACEBOOK_ID'], ENV['FACEBOOK_SECRET']
   config.omniauth :google_oauth2, ENV['GOOGLE_ID'], ENV['GOOGLE_SECRET']
   config.omniauth :azure_activedirectory_v2, {
     client_id:     ENV['AZURE_CLIENT_ID'],
