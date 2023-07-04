@@ -81,7 +81,7 @@ table.content.nb-table.table-responsive id="#{table_id + 'NotebookListingTable'}
                     -most_recent_comparison_path = diff_notebook_revision_path(nb, previous, revision: rev.commit_id)
                     span.sr-only #{" "}
                     a.update-link.tooltips href="#{most_recent_comparison_path}" title="Notebook version (diff) comparison highlighting recent changes made"
-                      span.glyphicon.glyphicon-edit.nounderline aria-hidden="true"
+                      i.fa.fa-edit.nounderline aria-hidden="true"
                       span.sr-only View changes from last update
                     -break
                 span #{" "}
@@ -97,12 +97,12 @@ table.content.nb-table.table-responsive id="#{table_id + 'NotebookListingTable'}
                 div.snippet-info ==nb.snippet(@user)
             div.tagRow
               -nb.tags.first(10).each do |tag|
-                a href="#{tag_path(tag.tag)}"
-                  span.label.tag style="font-size: 13px; font-family: calibri; color: #fff; background-color: #{color_for(tag.tag)}"
+                a href="#{tag_path(tag.tag_text)}"
+                  span.label.tag style="font-size: 13px; font-family: calibri; color: #fff; background-color: #{color_for(tag.tag_text)}"
                     span.sr-only Tag of
                     span.hidden aria-hidden="true" #{":"}
                     span.sr-only #{" \""}
-                    ==tag.tag
+                    ==tag.tag_text
                     span.sr-only #{"\""}
                 span.hidden aria-hidden="true" #{" "}
               -if nb.tags.size > 10

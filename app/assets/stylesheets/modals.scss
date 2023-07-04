@@ -121,15 +121,12 @@ textarea#descriptionField {
     }
 }
 
-
-/* Base Styles - JavaScript Generated */
-.bootbox.modal {
-    .modal-footer {
-        margin: 0 15px 15px;
-    }
-}
-
 /* ===== Inline Forms ===== */
+// Override bootstrap styling
+label {
+    font-weight: 400;
+    margin-bottom: 0;
+}
 label i.fa.fa-question-circle,
 label i.fa.fa-exclamation-circle {
     color: $info-alert-color;
@@ -397,6 +394,9 @@ table .form-group {
     overflow: hidden;
     padding: 30px;
     position: relative;
+    .alert {
+        padding: .75em 1.2em .75em .75em;
+    }
     img {
         display: block;
         margin: auto;
@@ -456,10 +456,10 @@ table .form-group {
 .oauth-login-container {
     margin-top: .5em;
     .google,
+    .azure
     .facebook,
     .github,
-    .gitlab,
-    .microsoft {
+    .gitlab {
         border: 0px;
         text-shadow: 0 1px rgba(0,0,0,0.4);
     }
@@ -475,16 +475,22 @@ table .form-group {
     .gitlab {
         background-color: #3f3177;
     }
-    .microsoft {
-        background-color: #005cbf;
+    .azure {
+        background-color: #0078D4;
     }
 }
 
 /* ===== Change Owner Modal ===== */
-#ownershipAutocompleteContainer #hiddenSpinner,
-#notebookAutocompleteContainer #hiddenSpinner {
+#ownershipAutocompleteContainer .hiddenSpinner,
+#notebookAutocompleteContainer .hiddenSpinner {
     display: block;
     margin-top: 1.5em;
+    position:absolute;
+    right:50%;
+    z-index: 1000;
+    &.loading {
+        display: block;
+    }
 }
 
 /* ===== Deprecate Notebook Modal ===== */
