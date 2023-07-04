@@ -66,8 +66,6 @@ Then, run the [dev startup script](../docker-dev.sh) to start the `nbgallery/dev
 The dev startup script should attach the container to the same network as MySQL and Solr.  Ruby Bundler is configured to install gems into a mounted directory, so they will persist if you restart the container.  You will need to use bundler to install gems whenever the Gemfile.lock changes or if this is the first time you've used the dev container:
 
 ```
-chmod +x nmatrix.sh
-./nmatrix.sh
 bundle install
 ```
 
